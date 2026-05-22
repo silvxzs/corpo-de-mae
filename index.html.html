@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Corpo de Mãe — Elimine a Barriga Pós-Parto em 21 Dias</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --creme:   #FDF6EE;
+  --creme2:  #F7EDE0;
+  --terra:   #C8825A;
+  --terra2:  #A05A38;
+  --verde:   #4A7C6F;
+  --verde2:  #2E5A50;
+  --escuro:  #1C1410;
+  --medio:   #4A3728;
+  --cinza:   #8A7060;
+  --rosa:    #E8B4A0;
+  --amarelo: #F4C842;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--creme);
+  color: var(--escuro);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ── TIPOGRAFIA ── */
+h1, h2, h3 { font-family: 'Playfair Display', serif; line-height: 1.2; }
+
+/* ── HERO ── */
+.hero {
+  background: var(--escuro);
+  position: relative;
+  overflow: hidden;
+  padding: 60px 20px 70px;
+  text-align: center;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, #4A3728 0%, #1C1410 70%);
+}
+.hero-badge {
+  position: relative;
+  display: inline-block;
+  background: var(--terra);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: 6px 18px;
+  border-radius: 100px;
+  margin-bottom: 24px;
+}
+.hero h1 {
+  position: relative;
+  font-size: clamp(28px, 7vw, 52px);
+  color: var(--creme);
+  max-width: 680px;
+  margin: 0 auto 20px;
+  font-weight: 900;
+}
+.hero h1 em {
+  color: var(--terra);
+  font-style: italic;
+}
+.hero-sub {
+  position: relative;
+  font-size: clamp(15px, 3.5vw, 18px);
+  color: var(--rosa);
+  max-width: 520px;
+  margin: 0 auto 36px;
+  font-weight: 300;
+}
+.hero-price-box {
+  position: relative;
+  display: inline-block;
+  background: var(--creme);
+  border-radius: 16px;
+  padding: 20px 32px;
+  margin-bottom: 28px;
+}
+.hero-price-box .de {
+  font-size: 13px;
+  color: var(--cinza);
+  text-decoration: line-through;
+}
+.hero-price-box .por {
+  font-size: 13px;
+  color: var(--medio);
+  margin-bottom: 2px;
+}
+.hero-price-box .valor {
+  font-family: 'Playfair Display', serif;
+  font-size: 56px;
+  font-weight: 900;
+  color: var(--terra2);
+  line-height: 1;
+}
+.hero-price-box .parcelas {
+  font-size: 12px;
+  color: var(--cinza);
+  margin-top: 4px;
+}
+.btn-cta {
+  display: inline-block;
+  background: var(--terra);
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 18px 42px;
+  border-radius: 100px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background .2s, transform .15s, box-shadow .2s;
+  box-shadow: 0 8px 32px rgba(200,130,90,.35);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+}
+.btn-cta:hover { background: var(--terra2); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(200,130,90,.45); }
+.btn-cta:active { transform: translateY(0); }
+.hero-garantia {
+  position: relative;
+  font-size: 12px;
+  color: var(--cinza);
+  margin-top: 14px;
+}
+.hero-garantia span { color: var(--rosa); }
+
+/* ── TRUST BAR ── */
+.trust-bar {
+  background: var(--creme2);
+  border-bottom: 1px solid #E5D5C5;
+  padding: 14px 20px;
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--medio);
+}
+.trust-bar span { display: flex; align-items: center; gap: 6px; }
+
+/* ── SEÇÕES ── */
+.section { padding: 60px 20px; max-width: 720px; margin: 0 auto; }
+.section-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--terra);
+  margin-bottom: 12px;
+}
+.section h2 {
+  font-size: clamp(24px, 5vw, 36px);
+  color: var(--escuro);
+  margin-bottom: 20px;
+}
+.section p {
+  font-size: 16px;
+  color: var(--medio);
+  margin-bottom: 14px;
+}
+
+/* ── DOR ── */
+.dor-section { background: var(--escuro); }
+.dor-section .section { max-width: 720px; }
+.dor-section .section-label { color: var(--rosa); }
+.dor-section h2 { color: var(--creme); }
+.dor-section p { color: #B09080; }
+.dor-list {
+  list-style: none;
+  margin: 24px 0;
+}
+.dor-list li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 12px 0;
+  border-bottom: 1px solid #2A1E18;
+  font-size: 15px;
+  color: #C8A898;
+}
+.dor-list li:last-child { border-bottom: none; }
+.dor-list li .icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+
+/* ── SOLUÇÃO ── */
+.solucao-box {
+  background: var(--verde);
+  border-radius: 20px;
+  padding: 32px 28px;
+  color: #fff;
+  margin-bottom: 30px;
+}
+.solucao-box h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+}
+.solucao-box p { color: rgba(255,255,255,.8); font-size: 15px; margin-bottom: 0; }
+
+/* ── PRODUTO ── */
+.produto-section { background: var(--creme2); }
+.produto-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 28px 24px;
+  box-shadow: 0 4px 24px rgba(0,0,0,.06);
+  margin-bottom: 14px;
+  border-left: 4px solid var(--terra);
+}
+.produto-card h3 {
+  font-size: 18px;
+  color: var(--escuro);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.produto-card .emoji { font-size: 22px; }
+.produto-card p { font-size: 14px; color: var(--cinza); margin: 0; }
+.produto-card .valor-individual {
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--cinza);
+}
+.produto-card .valor-individual span {
+  text-decoration: line-through;
+  margin-right: 4px;
+}
+
+/* ── MÓDULOS ── */
+.modulos-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 24px 0;
+}
+@media (max-width: 480px) { .modulos-grid { grid-template-columns: 1fr; } }
+.modulo {
+  background: #fff;
+  border-radius: 14px;
+  padding: 18px 16px;
+  border: 1px solid #E5D5C5;
+}
+.modulo .num {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--terra);
+  letter-spacing: .08em;
+  margin-bottom: 6px;
+}
+.modulo p { font-size: 13px; color: var(--medio); margin: 0; line-height: 1.5; }
+
+/* ── OFERTA STACK ── */
+.oferta-section { background: var(--escuro); }
+.oferta-section h2 { color: var(--creme); }
+.oferta-section .section-label { color: var(--rosa); }
+.stack-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid #2A1E18;
+  gap: 12px;
+}
+.stack-item:last-child { border-bottom: none; }
+.stack-item .nome { font-size: 14px; color: #C8A898; flex: 1; }
+.stack-item .de { font-size: 13px; color: #6A4A3A; text-decoration: line-through; white-space: nowrap; }
+.stack-total {
+  background: var(--terra);
+  border-radius: 14px;
+  padding: 20px 24px;
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.stack-total .label { font-size: 13px; color: rgba(255,255,255,.8); }
+.stack-total .valor { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 900; color: #fff; }
+
+/* ── GARANTIA ── */
+.garantia-box {
+  background: #fff;
+  border: 2px solid var(--verde);
+  border-radius: 20px;
+  padding: 28px 24px;
+  text-align: center;
+  margin: 30px 0;
+}
+.garantia-box .escudo { font-size: 40px; margin-bottom: 10px; }
+.garantia-box h3 { font-size: 20px; color: var(--verde2); margin-bottom: 10px; }
+.garantia-box p { font-size: 14px; color: var(--cinza); max-width: 420px; margin: 0 auto; }
+
+/* ── FAQ ── */
+.faq-item {
+  border-bottom: 1px solid #E5D5C5;
+  padding: 18px 0;
+  cursor: pointer;
+}
+.faq-item:last-child { border-bottom: none; }
+.faq-q {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--escuro);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  user-select: none;
+}
+.faq-q .arrow {
+  font-size: 18px;
+  color: var(--terra);
+  transition: transform .2s;
+  flex-shrink: 0;
+}
+.faq-a {
+  font-size: 14px;
+  color: var(--cinza);
+  margin-top: 10px;
+  line-height: 1.7;
+  display: none;
+}
+.faq-item.open .faq-a { display: block; }
+.faq-item.open .arrow { transform: rotate(45deg); }
+
+/* ── CTA FINAL ── */
+.cta-final {
+  background: linear-gradient(135deg, var(--terra) 0%, var(--terra2) 100%);
+  padding: 60px 20px;
+  text-align: center;
+}
+.cta-final h2 { color: #fff; font-size: clamp(24px, 5vw, 36px); margin-bottom: 12px; }
+.cta-final p { color: rgba(255,255,255,.8); font-size: 16px; margin-bottom: 32px; max-width: 480px; margin-left: auto; margin-right: auto; }
+.btn-cta-branco {
+  display: inline-block;
+  background: #fff;
+  color: var(--terra2);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 18px 42px;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: transform .15s, box-shadow .2s;
+  box-shadow: 0 8px 32px rgba(0,0,0,.15);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+.btn-cta-branco:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(0,0,0,.2); }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--escuro);
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 11px;
+  color: #4A3728;
+  line-height: 1.8;
+}
+
+/* ── UTILS ── */
+.text-center { text-align: center; }
+.mt-8 { margin-top: 8px; }
+.mt-16 { margin-top: 16px; }
+.mt-24 { margin-top: 24px; }
+.mt-32 { margin-top: 32px; }
+
+/* ── FADE IN ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero > * { animation: fadeUp .6s ease both; }
+.hero > *:nth-child(2) { animation-delay: .1s; }
+.hero > *:nth-child(3) { animation-delay: .2s; }
+.hero > *:nth-child(4) { animation-delay: .3s; }
+.hero > *:nth-child(5) { animation-delay: .4s; }
+.hero > *:nth-child(6) { animation-delay: .5s; }
+</style>
+</head>
+<body>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-badge">⭐ Método Exclusivo Pós-Parto</div>
+  <h1>Elimine a Barriga Pós-Parto em <em>21 Dias</em> — Sem Academia e Sem Dieta Radical</h1>
+  <p class="hero-sub">O protocolo simples que mães ocupadas estão usando pra recuperar o corpo em casa, no próprio ritmo, sem prejudicar a amamentação.</p>
+  <!-- OFERTA DESTAQUE HERO -->
+  <div style="background:linear-gradient(135deg,#C8825A,#A05A38); border-radius:24px; padding:32px 28px; max-width:460px; margin:0 auto 28px; position:relative; box-shadow:0 16px 48px rgba(200,130,90,.4);">
+    <div style="position:absolute; top:-14px; left:50%; transform:translateX(-50%); background:#F4C842; color:#1C1410; font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; padding:5px 18px; border-radius:100px; white-space:nowrap;">🔥 Oferta por tempo limitado</div>
+    <div style="font-size:13px; color:rgba(255,255,255,.7); margin-bottom:4px;">Valor normal</div>
+    <div style="font-size:22px; color:rgba(255,255,255,.4); text-decoration:line-through; margin-bottom:12px; font-family:'Playfair Display',serif;">R$97,90</div>
+    <div style="font-size:14px; color:rgba(255,255,255,.9); margin-bottom:6px; font-weight:500;">Hoje por apenas</div>
+    <div style="font-family:'Playfair Display',serif; font-size:72px; font-weight:900; color:#fff; line-height:1; margin-bottom:4px;">R$19,90</div>
+    <div style="font-size:13px; color:rgba(255,255,255,.7); margin-bottom:20px;">pagamento único · acesso imediato</div>
+    <div style="background:rgba(255,255,255,.15); border-radius:12px; padding:10px 14px; margin-bottom:20px; font-size:13px; color:#fff; display:flex; align-items:center; justify-content:center; gap:8px;">
+      <span>⏳</span> <span>Expira em: <strong id="timer-hero">09:59</strong></span>
+    </div>
+    <a href="https://pay.cakto.com.br/r8epf9p_894637" style="display:block; background:#fff; color:#A05A38; font-family:'DM Sans',sans-serif; font-size:17px; font-weight:700; padding:18px 28px; border-radius:100px; text-decoration:none; text-align:center; box-shadow:0 8px 24px rgba(0,0,0,.15); transition:transform .15s;">✅ GARANTIR MINHA OFERTA AGORA →</a>
+  </div>
+  <p class="hero-garantia">🔒 Compra 100% segura · <span>Garantia de 7 dias sem perguntas</span> · Cartão, PIX ou boleto</p>
+</section>
+
+<!-- ── TIMER BAR ── -->
+<div id="timer-bar" style="background:#1C1410; color:#FDF6EE; text-align:center; padding:10px 16px; font-size:13px; font-weight:500; display:flex; align-items:center; justify-content:center; gap:10px; flex-wrap:wrap;">
+  <span style="color:#E8B4A0;">⏳ Oferta especial expira em:</span>
+  <span id="timer-display" style="font-family:'Playfair Display',serif; font-size:20px; color:#C8825A; font-weight:700; letter-spacing:.04em;">09:59</span>
+  <span style="color:#8A7060; font-size:11px;">— após isso o preço volta para R$97,90</span>
+</div>
+
+<!-- ── TRUST BAR ── -->
+<div class="trust-bar">
+  <span>🔒 Pagamento seguro</span>
+  <span>📲 Acesso imediato</span>
+  <span>↩️ Garantia de 7 dias</span>
+  <span>💳 PIX · Cartão · Boleto</span>
+</div>
+
+<!-- ── POPUP MANADA ── -->
+<div id="popup-manada" style="position:fixed; bottom:20px; left:16px; background:#fff; border-radius:14px; box-shadow:0 8px 32px rgba(0,0,0,.14); padding:12px 16px; max-width:280px; width:calc(100% - 32px); display:flex; align-items:center; gap:12px; z-index:9999; opacity:0; transform:translateY(20px); transition:opacity .4s, transform .4s; pointer-events:none;">
+  <div style="width:38px; height:38px; border-radius:50%; background:#F7EDE0; display:flex; align-items:center; justify-content:center; font-size:20px; flex-shrink:0;">👩</div>
+  <div style="flex:1; min-width:0;">
+    <div id="popup-texto" style="font-size:12px; color:#1C1410; font-weight:500; line-height:1.4;"></div>
+    <div style="font-size:11px; color:#8A7060; margin-top:2px;">agora mesmo</div>
+  </div>
+</div>
+
+<!-- ── DOR ── -->
+<div class="dor-section">
+  <div class="section">
+    <div class="section-label">Você se identifica?</div>
+    <h2>"Não me reconheço mais no espelho desde que tive meu filho."</h2>
+    <p>Se você é mãe e sente que seu corpo nunca voltou ao que era antes, saiba: você não está sozinha — e não é culpa sua.</p>
+    <ul class="dor-list">
+      <li><span class="icon">😔</span>A barriga continua flácida meses depois do parto, mesmo tentando de tudo</li>
+      <li><span class="icon">😩</span>Você não tem tempo pra academia com bebê em casa, e se tivesse, estaria exausta</li>
+      <li><span class="icon">😤</span>Já tentou dieta restritiva mas teve medo de afetar o leite materno</li>
+      <li><span class="icon">😞</span>Sente culpa por querer cuidar do próprio corpo quando tem um filho pra cuidar</li>
+      <li><span class="icon">😢</span>Olha pras roupas antigas e pensa "será que vou usar isso de novo algum dia?"</li>
+    </ul>
+    <p style="color:#C8A898;">O problema não é falta de força de vontade. O corpo pós-parto tem necessidades completamente diferentes — e nenhum método genérico foi feito pra isso.</p>
+  </div>
+</div>
+
+<!-- ── SOLUÇÃO ── -->
+<div class="section">
+  <div class="section-label">A solução</div>
+  <h2>Apresentando o Método Corpo de Mãe</h2>
+  <p>Um protocolo de 21 dias criado especificamente para o corpo pós-parto — respeitando suas limitações, sua rotina caótica e a amamentação.</p>
+  <div class="solucao-box">
+    <h3>Por que 21 dias?</h3>
+    <p>O corpo pós-parto responde muito mais rápido a mudanças quando abordado corretamente. 21 dias é tempo suficiente pra ver resultado real, criar o hábito e não abandonar no meio do caminho por exaustão.</p>
+  </div>
+  <div class="modulos-grid">
+    <div class="modulo">
+      <div class="num">SEMANA 1</div>
+      <p><strong>Adaptação</strong> — ativa o corpo sem sobrecarregar. Hábitos mínimos de alto impacto.</p>
+    </div>
+    <div class="modulo">
+      <div class="num">SEMANA 2</div>
+      <p><strong>Ativação</strong> — o metabolismo começa a trabalhar. Alimentação ajustada sem cortar grupos alimentares.</p>
+    </div>
+    <div class="modulo">
+      <div class="num">SEMANA 3</div>
+      <p><strong>Resultado</strong> — consolidação dos hábitos e percepção real de mudança no espelho e na balança.</p>
+    </div>
+    <div class="modulo">
+      <div class="num">CHECKLIST</div>
+      <p><strong>Acompanhamento semanal</strong> — você vê o próprio progresso e mantém o foco sem depender de ninguém.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ── PRODUTO ── -->
+<div class="produto-section">
+  <div class="section">
+    <div class="section-label">O que você recebe</div>
+    <h2>Tudo que você precisa para começar hoje</h2>
+
+    <div class="produto-card">
+      <h3><span class="emoji">📖</span>PDF Corpo de Mãe — Protocolo Completo</h3>
+      <p>O guia principal com o protocolo de 21 dias: alimentação prática, hábitos diários e tudo que você precisa saber sobre o corpo pós-parto. Linguagem simples, aplicação imediata.</p>
+      <div class="valor-individual">Valor individual: <span>R$97,00</span></div>
+    </div>
+
+    <div class="produto-card" style="border-left-color: var(--verde);">
+      <h3><span class="emoji">🥗</span>Bônus 1 — Cardápio Prático Pós-Parto</h3>
+      <p>Cardápio da semana com refeições rápidas, saborosas e seguras pra quem amamenta. Sem ingredientes caros ou complicados. Feito pra mãe que tem 20 minutos no máximo pra cozinhar.</p>
+      <div class="valor-individual">Valor individual: <span>R$47,00</span></div>
+    </div>
+
+    <div class="produto-card" style="border-left-color: var(--amarelo);">
+      <h3><span class="emoji">✅</span>Bônus 2 — Checklist de Acompanhamento</h3>
+      <p>Uma checklist simples pra marcar o progresso semana a semana e nunca perder o fio da meada — mesmo nos dias mais difíceis.</p>
+      <div class="valor-individual">Valor individual: <span>R$19,90</span></div>
+    </div>
+
+    <div class="text-center mt-32">
+      <a href="https://pay.cakto.com.br/r8epf9p_894637" class="btn-cta" style="display:inline-block;">✅ Quero acesso agora por R$19,90 →</a>
+      <p style="font-size:12px; color:var(--cinza); margin-top:12px;">Acesso imediato ao PDF + bônus após o pagamento</p>
+    </div>
+  </div>
+</div>
+
+<!-- ── STACK ── -->
+<div class="oferta-section">
+  <div class="section">
+    <div class="section-label">O valor real da oferta</div>
+    <h2>Veja o que você está levando por R$19,90</h2>
+
+    <div class="stack-item">
+      <span class="nome">📖 PDF Corpo de Mãe — Protocolo 21 Dias</span>
+      <span class="de">R$97,90</span>
+    </div>
+    <div class="stack-item">
+      <span class="nome">🥗 Bônus 1 — Cardápio Prático Pós-Parto</span>
+      <span class="de">R$47</span>
+    </div>
+    <div class="stack-item">
+      <span class="nome">✅ Bônus 2 — Checklist de Acompanhamento</span>
+      <span class="de">R$19,90</span>
+    </div>
+
+    <div class="stack-total">
+      <div>
+        <div class="label">Valor total</div>
+        <div class="label" style="text-decoration:line-through; font-size:18px; color:rgba(255,255,255,.5);">R$171,00</div>
+      </div>
+      <div style="text-align:right;">
+        <div class="label">Hoje por apenas</div>
+        <div class="valor">R$19,90</div>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <a href="https://pay.cakto.com.br/r8epf9p_894637" class="btn-cta" style="display:inline-block;">✅ Garantir minha vaga por R$19,90 →</a>
+      <p style="font-size:12px; color:#6A4A3A; margin-top:12px;">⚡ Este preço pode aumentar a qualquer momento</p>
+    </div>
+  </div>
+</div>
+
+<!-- ── OFERTA MEIO DA PÁGINA ── -->
+<div style="background:linear-gradient(135deg,#1C1410 0%,#4A3728 100%); padding:56px 20px; text-align:center;">
+  <div style="max-width:500px; margin:0 auto;">
+    <div style="display:inline-block; background:#F4C842; color:#1C1410; font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; padding:5px 18px; border-radius:100px; margin-bottom:20px;">🔥 Oferta especial — só hoje</div>
+    <h2 style="font-family:'Playfair Display',serif; font-size:clamp(26px,6vw,40px); color:#FDF6EE; margin-bottom:12px; line-height:1.2;">Não deixa pra depois.<br/>O preço muda em breve.</h2>
+    <p style="font-size:15px; color:#B09080; margin-bottom:28px; line-height:1.7;">Você recebe o protocolo completo, o cardápio e o checklist por um valor que não vai se repetir. Acesso imediato após o pagamento.</p>
+
+    <div style="background:rgba(255,255,255,.05); border:1px solid rgba(200,130,90,.3); border-radius:20px; padding:28px 24px; margin-bottom:24px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; padding:10px 0; border-bottom:1px solid rgba(255,255,255,.08); font-size:14px;">
+        <span style="color:#C8A898;">📖 PDF Corpo de Mãe</span><span style="color:#6A4A3A; text-decoration:line-through;">R$97,90</span>
+      </div>
+      <div style="display:flex; justify-content:space-between; align-items:center; padding:10px 0; border-bottom:1px solid rgba(255,255,255,.08); font-size:14px;">
+        <span style="color:#C8A898;">🥗 Cardápio Prático Pós-Parto</span><span style="color:#6A4A3A; text-decoration:line-through;">R$47</span>
+      </div>
+      <div style="display:flex; justify-content:space-between; align-items:center; padding:10px 0; font-size:14px;">
+        <span style="color:#C8A898;">✅ Checklist de Acompanhamento</span><span style="color:#6A4A3A; text-decoration:line-through;">R$19,90</span>
+      </div>
+      <div style="border-top:1px solid rgba(200,130,90,.4); margin-top:14px; padding-top:14px; display:flex; justify-content:space-between; align-items:center;">
+        <div style="text-align:left;">
+          <div style="font-size:12px; color:#8A7060;">Total normal: <span style="text-decoration:line-through;">R$171</span></div>
+          <div style="font-size:13px; color:#E8B4A0; margin-top:2px;">Você paga hoje:</div>
+        </div>
+        <div style="font-family:'Playfair Display',serif; font-size:52px; font-weight:900; color:#C8825A; line-height:1;">R$19,90</div>
+      </div>
+    </div>
+
+    <div style="background:rgba(200,130,90,.15); border:1px solid rgba(200,130,90,.3); border-radius:12px; padding:12px 16px; margin-bottom:22px; font-size:14px; color:#E8B4A0; display:flex; align-items:center; justify-content:center; gap:8px;">
+      ⏳ Oferta expira em: <strong id="timer-meio" style="font-size:18px; font-family:'Playfair Display',serif;">09:59</strong>
+    </div>
+
+    <a href="https://pay.cakto.com.br/r8epf9p_894637" style="display:block; background:#C8825A; color:#fff; font-family:'DM Sans',sans-serif; font-size:17px; font-weight:700; padding:20px 28px; border-radius:100px; text-decoration:none; text-align:center; box-shadow:0 8px 32px rgba(200,130,90,.4); max-width:420px; margin:0 auto;">✅ QUERO MEU CORPO DE MÃE POR R$19,90 →</a>
+    <p style="font-size:12px; color:#4A3728; margin-top:14px;">🔒 Pagamento seguro · Acesso imediato · Garantia de 7 dias</p>
+  </div>
+</div>
+
+<!-- ── GARANTIA ── -->
+<div class="section">
+  <div class="garantia-box">
+    <div class="escudo">🛡️</div>
+    <h3>Garantia Incondicional de 7 Dias</h3>
+    <p>Se por qualquer motivo você não ficar satisfeita com o material, basta enviar um email em até 7 dias após a compra e devolvemos 100% do seu dinheiro — sem burocracia, sem perguntas.</p>
+    <p style="margin-top:10px; font-size:13px; color:var(--cinza);">O risco é todo nosso. Você não tem nada a perder.</p>
+  </div>
+</div>
+
+<!-- ── FAQ ── -->
+<div class="section" style="padding-top:10px;">
+  <div class="section-label">Dúvidas frequentes</div>
+  <h2 style="margin-bottom:24px;">Perguntas que toda mãe faz antes de comprar</h2>
+
+  <div class="faq-item">
+    <div class="faq-q">Posso seguir o método enquanto amamenta? <span class="arrow">+</span></div>
+    <div class="faq-a">Sim. O protocolo foi desenvolvido levando em conta as necessidades da mãe que amamenta. Nenhuma das restrições alimentares é radical o suficiente pra afetar a produção de leite. Mas como sempre, em caso de dúvida específica consulte seu médico.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Funciona para cesárea também? <span class="arrow">+</span></div>
+    <div class="faq-a">Sim. O protocolo respeita o tempo de recuperação da cesárea. A semana 1 é especialmente projetada pra quem ainda está em recuperação física e não pode fazer esforço intenso.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Quanto tempo por dia preciso dedicar? <span class="arrow">+</span></div>
+    <div class="faq-a">O protocolo foi feito para mães ocupadas. Na semana 1, o mínimo é 10-15 minutos por dia. Conforme você avança, vai aumentando gradualmente, mas nunca ultrapassa 30 minutos diários.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Como recebo o material após a compra? <span class="arrow">+</span></div>
+    <div class="faq-a">Imediatamente após o pagamento você recebe um email com o link de acesso ao PDF e aos bônus. Tudo funciona no celular — sem precisar de computador.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">E se eu não gostar? <span class="arrow">+</span></div>
+    <div class="faq-a">Você tem 7 dias de garantia incondicional. Basta enviar um email e devolvemos 100% do valor pago, sem questionamentos.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Precisa de academia ou equipamento? <span class="arrow">+</span></div>
+    <div class="faq-a">Não. O protocolo completo foi desenvolvido pra ser feito em casa, sem nenhum equipamento. Tudo que você precisa é do guia e de 15-30 minutos de tempo.</div>
+  </div>
+</div>
+
+<!-- ── CTA FINAL ── -->
+<div class="cta-final">
+  <h2>Você merece se sentir bem no próprio corpo.</h2>
+  <p>Por apenas R$19,90 você tem acesso imediato ao protocolo completo e começa hoje — no seu ritmo, em casa, com a sua rotina de mãe.</p>
+  <a href="https://pay.cakto.com.br/r8epf9p_894637" class="btn-cta-branco">✅ Quero meu Corpo de Mãe agora por R$19,90 →</a>
+  <p style="font-size:12px; color:rgba(255,255,255,.5); margin-top:16px;">🔒 Compra segura · Acesso imediato · Garantia de 7 dias</p>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <p>© 2025 Corpo de Mãe · Todos os direitos reservados</p>
+  <p style="margin-top:6px;">Este produto é um material educativo em formato digital. Não substitui acompanhamento médico ou nutricional profissional.<br/>Resultados individuais podem variar conforme cada organismo e nível de comprometimento com o protocolo.</p>
+</footer>
+
+<script>
+// FAQ
+document.querySelectorAll('.faq-item').forEach(item => {
+  item.addEventListener('click', () => {
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  });
+});
+
+// TIMER — sincroniza todos os timers da página
+(function() {
+  var total = 9 * 60 + 59;
+  var els = ['timer-display','timer-hero','timer-meio'].map(function(id){ return document.getElementById(id); }).filter(Boolean);
+  function tick() {
+    if (total <= 0) { total = 9 * 60 + 59; }
+    var m = Math.floor(total / 60);
+    var s = total % 60;
+    var txt = (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
+    els.forEach(function(el){
+      el.textContent = txt;
+      if (total <= 60) { el.style.color = '#E24B4A'; }
+    });
+    total--;
+  }
+  tick();
+  setInterval(tick, 1000);
+})();
+
+// POPUP MANADA
+(function() {
+  var notifs = [
+    { emoji: '👩', texto: '1.247 pessoas visualizaram essa página hoje' },
+    { emoji: '🧑‍🍼', texto: 'Alguém de São Paulo acessou o protocolo agora' },
+    { emoji: '👩‍👧', texto: '832 mães já começaram o método esta semana' },
+    { emoji: '🌟', texto: 'Alguém de Belo Horizonte acabou de acessar' },
+    { emoji: '👩', texto: '1.389 pessoas visualizaram essa oferta hoje' },
+    { emoji: '🧑‍🍼', texto: 'Alguém do Rio de Janeiro acessou agora' },
+    { emoji: '👩‍👧', texto: '94 pessoas estão nessa página agora mesmo' },
+    { emoji: '🌟', texto: 'Alguém de Curitiba garantiu o acesso hoje' },
+  ];
+  var i = 0;
+  var popup = document.getElementById('popup-manada');
+  var texto = document.getElementById('popup-texto');
+
+  function showPopup() {
+    var n = notifs[i % notifs.length];
+    popup.querySelector('div').textContent = n.emoji;
+    texto.textContent = n.texto;
+    popup.style.opacity = '1';
+    popup.style.transform = 'translateY(0)';
+    setTimeout(function() {
+      popup.style.opacity = '0';
+      popup.style.transform = 'translateY(20px)';
+    }, 4000);
+    i++;
+  }
+
+  setTimeout(function() {
+    showPopup();
+    setInterval(showPopup, 20000);
+  }, 5000);
+})();
+</script>
+</body>
+</html>
